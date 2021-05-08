@@ -1,21 +1,25 @@
-# 5. Запросите у пользователя значения выручки и издержек фирмы. Определите,
-# с каким финансовым результатом работает фирма (прибыль — выручка больше издержек,
-# или убыток — издержки больше выручки). Выведите соответствующее сообщение.
-# Если фирма отработала с прибылью, вычислите рентабельность выручки (соотношение прибыли к выручке).
-# Далее запросите численность сотрудников фирмы и определите прибыль фирмы в расчете на одного сотрудника.
-proceeds = float(input('Введите выручку фирмы: '))
-costs = float(input('Введите издержки фирмы: '))
-if proceeds > costs:
-    print('Фирма работает с прибылью')
-    profitabilityProceeds = (proceeds - costs) / proceeds
-    print('Рентабельность выручки: {:2.2f}'.format(profitabilityProceeds))
-    numberEmployees = int(input('Введите численность сотрудников фирмы: '))
-    profitabilityEmployees = (proceeds - costs) / numberEmployees
-    print(f'Прибыль фирмы в расчете на одного сотрудника: {profitabilityEmployees:2.2f}')
-else:
-    print('Фирма работает с убытком')
+# Вариант решения № 1:
+my_list = [7, 5, 3, 3, 2]
+new_element = int(input('Введите новый элемент рейтинга: '))
+my_list.append(new_element)
+my_list.sort(reverse=True)
+print('Вариант решения № 1:', my_list)
 
+# Вариант решения № 2:
 
+my_list = [7, 5, 3, 3, 2]
+new_element = int(input('Введите новый элемент рейтинга: '))
+count = 0
+for num in my_list:
+    if new_element > my_list[count]:
+        my_list.insert(count, new_element)
+        break
+    elif count < len(my_list) - 1 and new_element == num and new_element > my_list[count + 1]:
+        my_list.insert(count + 1, new_element)
+        break
+    elif count == len(my_list) - 1 and new_element <= num:
+        my_list.append(new_element)
+        break
+    count += 1
 
-
-
+print('Вариант решения № 2:', my_list)
