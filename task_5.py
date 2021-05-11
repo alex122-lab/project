@@ -1,6 +1,6 @@
 # Вариант решения № 1:
 my_list = [7, 5, 3, 3, 2]
-new_element = int(input('Введите новый элемент рейтинга: '))
+new_element = float(input('Введите новый элемент рейтинга: '))
 my_list.append(new_element)
 my_list.sort(reverse=True)
 print('Вариант решения № 1:', my_list)
