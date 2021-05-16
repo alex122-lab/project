@@ -1,5 +1,8 @@
 def int_func(word):
-    word = word.title()
+    listW = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'v',
+             'x', 'y', 'z', 'j', 'u', 'w'}
+    if set(word).issubset(listW):
+        word = word.title()
     print(word)
 
 word = input('Введите слово: ')
