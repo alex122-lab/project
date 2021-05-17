@@ -3,10 +3,13 @@ def my_func(x, y):
     return count
 
 def my_func_2(x, y):
-    count = 1
-    for i in range(abs(y)):
-        count *= 1 / x
-    return count
+    if x <= 0 or y >= 0:
+        return 'Ошибка - х должен быть больше 0, а у должен быть меньше 0'
+    else:
+        count = 1
+        for i in range(abs(y)):
+            count *= 1 / x
+        return count
 x = float(input('Введите действительное число: '))
 y = int(input('Введите целое отрицательное число: '))
 
