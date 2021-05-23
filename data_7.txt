@@ -1,0 +1,4 @@
+firm_1 ao 9000 10000
+firm_2 ooo 7000 4000
+firm_3 pao 5000 4000
+firm_4 pao 7000 2000
